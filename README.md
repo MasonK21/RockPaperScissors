@@ -1,0 +1,1 @@
+This is a simple Rock Paper Scissors program in javascript. It lasts five rounds and displays the winner.
