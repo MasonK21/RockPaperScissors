@@ -2,78 +2,33 @@
 <html>
 <head>
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        function game() {
-        function computerPlay() {
-            let number = Math.floor(Math.random()*3);
-            if (number == 0) {
-                return 'rock';
-            }
-            else if (number == 1) {
-                return 'paper';
-            }
-            else if (number == 2) {
-                return 'scissors';
-            }
-        }
+    <h1 class="keys">
+        <button onclick="playRound('rock',computerSelection)"name="rock" class="key">Rock</button>
+        <button onclick="playRound('rock',computerSelection)"name="paper" class="key">Paper</button>
+        <button onclick="playRound('rock',computerSelection)"name="scissors" class="key">Scissors</button>
+    </h1>
 
-        function playRound(playerSelection,computerSelection) {
-            playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
-            computerSelection = computerPlay().toLowerCase();
-
-            if (playerSelection == computerSelection) {
-                i--;
-                alert("You both picked " + playerSelection + "! It's a tie!");
-            }
-            else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                playerScore++;
-                alert("You win! Rock beats scissors.");
-            }
-            else if (playerSelection == 'rock' && computerSelection == 'paper') {
-                computerScore++;
-                alert("You lose! Paper beats Rock.");
-            }
-            else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                playerScore++;
-                alert("You win! Paper beats Rock.");
-            }
-            else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-                computerScore++;
-                alert("You lose! Scissors beats Paper.");
-            }
-            else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                computerScore++;
-                alert("You lose! Rock beats Scissors.");
-            }
-            else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                playerScore++;
-                alert("You win! Scissors beats Paper.");
-            }
-            else {
-                i--;
-                alert("Enter Rock, Paper, or Scissors");
-            }
-        }
-        let i = 0;
-        let playerScore = 0;
-        let computerScore = 0;
-        alert("You are playing Rock, Paper, Scissors. There is five rounds.")
-        while(i<=4) {
-            playRound();
-            alert("The score is player:" + playerScore + " computer:" + computerScore);
-            i++;
-        }
-        if (playerScore > computerScore) {
-                alert("You beat the computer " + playerScore + " to " + computerScore + "!");
-            }
-            else if (computerScore > playerScore) {
-                alert("You lost to the computer " + playerScore + " to " + computerScore + "!");
-            }
-        }
-
-        game();
-    </script>
+    <h2 class="score">
+        <p>Score</p>
+        <p> &emsp; &nbsp; Player | Computer</p>
+        <p class="Scores"></p>
+        <p class="Info"></p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="result" style="font-size: 50px"></p>
+        <button onclick="resetGame()"class="play">Reset Game</button>
+    </h2>
 </body>
+<script src="script.js"></script>
 </html>

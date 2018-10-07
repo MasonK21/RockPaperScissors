@@ -1,0 +1,52 @@
+html {
+    background-color:black;
+}
+
+.play{
+    border: .4rem solid white;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 1rem .5rem;
+    transition: all 0.1s ease;
+    width: 10rem;
+    text-align: center;
+    background: darkgrey;
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    height: 75px;
+    top: 65%;
+    left: 50%;
+    margin-left: -57px;
+    margin-top: -130px;
+    font-weight: bold;
+}
+
+.key {
+    border: .4rem solid white;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all 0.1s ease;
+    width: 10rem;
+    text-align: center;
+    background: darkgrey;
+    cursor: pointer;
+}
+.keys {
+    position: absolute;
+    width: 414px;
+    height: 105px;
+    top: 50%;
+    left: 50%;
+    margin-left: -207px;
+    margin-top: -130px;
+    display: flex;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
